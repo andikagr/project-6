@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Link Security Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h1>PhishGuard</h1>
+            </div>
+            <p>Paste a URL below to check for potential security threats.</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <div class="input-group">
+                    <i class="fa-solid fa-link"></i>
+                    <input type="text" id="urlInput" placeholder="https://example.com/login..." autocomplete="off">
+                </div>
+                <button id="checkBtn">Check Now</button>
+            </div>
+
+            <div id="loading" class="hidden">
+                 <div class="scanner"></div>
+                 <p>Scanning URL...</p>
+            </div>
+
+            <div id="result" class="hidden">
+                <!-- Content injected by JS -->
+            </div>
+        </main>
+
+        <footer>
+            <p>Demo Version • Uses Heuristic Detection</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
